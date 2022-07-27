@@ -6,10 +6,9 @@ Esta página consume un backend que devuelve el texto al revés y un flag que in
 Está realizado con react, usando redux y el backend con node.js
 ## `Ejecutar la app`
 
-Para ejecutar la app tienes que clonar el repositorio de github.Una vez clonado debes instalar las dependencias usando el comando npm install.
+Para ejecutar la app tienes que clonar el repositorio de github. Una vez clonado debes instalar las dependencias usando el comando npm install.
 Una vez instaladas las dependecias ya podrás ejecutar el frontend (por defecto en el puerto 3000) con npm start, y backend en otra terminal (por defecto en el puerto 3001) con npm start.<br/>
 Una vez levantado todo ya podras visualizar la página y empezar a escribir frases para darlas vuelta.
-
 
 ## `ACLARACIONES`
 
@@ -26,4 +25,8 @@ La API tiene un solo endpoint que recibe un texto ingresado en la vista de usuar
 Esta es la ruta usada para mandar el texto. En caso de que se levante el backend localmente va a estar ubicada en el puerto 3001. Es de tipo GET. Recibe una query "?text="" ", por donde se envía el texto.
 Devuelve un objeto con un campo text: STRING con el texto ingresado dado vuelta y un campo palindrome: BOOLEAN que devuelve true si la frase se lee igual en ambos sentidos.
 <br/>
+
+## `Tests`
+Los tests están hechos con supertest, mocha y chai. <br/>
+Para ejecutarlos debes posicionarte en la carpeta de tests, instalar las dependencias y ejecutar el comando npm test. <br/>
 

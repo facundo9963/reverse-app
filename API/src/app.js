@@ -24,16 +24,19 @@ server.use((req, res, next) => {
 server.get("/iecho", function (req, res) {
   let text = req.query.text;
   let re = /[^A-Za-z0-9]/g;
-  let lowRegStr = text.toLowerCase().replace(re, "");
-  let reverseStr = lowRegStr.split("").reverse().join("");
-  if (text && lowRegStr === reverseStr) {
-    res
-      .status(200)
-      .json({ text: text.split("").reverse().join(""), palindrome: true });
-  } else if (text) {
-    res
-      .status(200)
-      .json({ text: text.split("").reverse().join(""), palindrome: false });
+  if (text){
+    let lowRegStr = text.toLowerCase().replace(re, "");
+    let reverseStr = lowRegStr.split("").reverse().join("");
+    if (text && lowRegStr === reverseStr) {
+      res
+        .status(200)
+        .json({ text: text.split("").reverse().join(""), palindrome: true });
+    } else {
+      res
+        .status(200)
+        .json({ text: text.split("").reverse().join(""), palindrome: false });
+    } 
+    
   } else {
     res.status(400).json({ error: "no text" });
   }
