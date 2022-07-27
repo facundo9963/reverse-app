@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getReverseWord } from "../redux/accions";
+import { getReverseWord } from "../../redux/accions";
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+import {Container, SendButton,} from './styles'
+
 
 
 function InputBar() {
+
+
   const dispatch = useDispatch();
 
   // Creo un estado local para controlar el formulario
@@ -29,7 +32,7 @@ function InputBar() {
   };
 
   return (
-    <form >
+    <Container >
       <TextField
         fullWidth
         id="outlined-basic"
@@ -38,10 +41,8 @@ function InputBar() {
         value={input}
         onChange={(e) => handleChange(e)}
       />
-      <Button variant="contained" onClick={(e) => handleSubmit(e)}>Send</Button>
-      <button  onClick={(e) => handleSubmit(e)}>
-      </button>
-    </form>
+      <SendButton variant="contained" onClick={(e) => handleSubmit(e)}>Send</SendButton>
+    </Container>
   );
 }
 

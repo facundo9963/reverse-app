@@ -10,7 +10,11 @@ const initialState = {
     
     switch (type) {
       case GET_REVERSE_WORD:
-        return { ...state, reverseTexts: [...state.reverseTexts, payload]};
+        if(payload !== null){   //no acepto valores nulos
+          return { ...state, reverseTexts: [...state.reverseTexts, payload]};
+        }else {
+          return { ...state };
+        }
       default:
         return { ...state };
     }
