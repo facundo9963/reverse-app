@@ -5,13 +5,13 @@ import { ContainerList } from "./styles";
 import ListElement from "../ListElement/ListElement";
 
 function List() {
-  const texts = useSelector((state) => state.reverseTexts);
+  const reverseObjects = useSelector((state) => state.reverseTexts);
 
   return (
     <ContainerList>
-      {texts &&
-        texts.map((text,i) => {
-          return <ListElement key={i} text={text} />;
+      {reverseObjects &&
+        reverseObjects.map((reverse,i) => {
+          return <ListElement key={i} text={reverse.text} palindrome={reverse.palindrome}/>;
         })}
     </ContainerList>
   );

@@ -10,7 +10,7 @@ export function getReverseWord(word) {
       );
       dispatch({
         type: GET_REVERSE_WORD,
-        payload: reverseWord.data.text,
+        payload: reverseWord.data,
       });
     } catch (error) {
       console.log(error);

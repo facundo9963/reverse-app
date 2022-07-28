@@ -2,7 +2,7 @@ import {GET_REVERSE_WORD} from "./accions";
 
 
 const initialState = {
-    reverseTexts:[]
+    reverseTexts:[],
   };
   
   // REDUCER
@@ -10,7 +10,7 @@ const initialState = {
     
     switch (type) {
       case GET_REVERSE_WORD:
-        if(payload !== null){   //no acepto valores nulos
+        if(payload.text !== null){   //no acepto valores nulos
           return { ...state, reverseTexts: [...state.reverseTexts, payload]};
         }else {
           return { ...state };
