@@ -1,4 +1,4 @@
-import {GET_REVERSE_WORD} from "./accions";
+import {GET_REVERSE_WORD, DELETE_REVERSE_WORD} from "./accions";
 
 
 const initialState = {
@@ -15,6 +15,8 @@ const initialState = {
         }else {
           return { ...state };
         }
+      case DELETE_REVERSE_WORD:
+        return {...state, reverseTexts: state.reverseTexts.filter((text) => text.ID !== payload)}
       default:
         return { ...state };
     }

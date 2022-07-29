@@ -4,7 +4,13 @@ import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import CancelIcon from '@mui/icons-material/Cancel';
 
 
+
+
 function ListElement({text, palindrome}) {
+
+ 
+
+
   if (palindrome){
     return(
     <Container>
@@ -13,6 +19,7 @@ function ListElement({text, palindrome}) {
       <GreenIcon>
       <CheckBoxIcon/>
       </GreenIcon>
+      
     </Container>
     )
   }else{

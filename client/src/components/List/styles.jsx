@@ -15,3 +15,15 @@ export const ContainerList = styled(List)({
   padding: 10,
   borderRadius: 4,
 });
+export const ContainerElement= styled("div")({
+  display: "flex",
+  justifyContent: "center",
+  width: "100%",
+  minHeight: "50px",
+  margin: "auto",
+  marginTop: "15px",
+  color: "darkslategray",
+  padding: 10,
+  paddingRight: 30,
+  borderRadius: 4,
+});

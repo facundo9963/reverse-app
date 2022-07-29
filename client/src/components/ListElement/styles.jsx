@@ -5,7 +5,7 @@ import ListItem from "@mui/material/ListItem";
 
 export const Container = styled(ListItem)({
   display: "flex",
-  width: "100%",
+  width: "80%",
   justifyContent: "space-around",
 });
 export const Item = styled(ListItemText)({
